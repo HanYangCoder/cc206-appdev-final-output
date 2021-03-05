@@ -11,8 +11,31 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       
-      body: Container(
-        child: Text('Hello there!'),
+      body: Column(
+
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+
+        children: [
+
+          Center(
+            child: Image(
+              image: AssetImage('assets/PeppaPig_Practice2.gif'),
+              height: 250.0,
+              width: 250.0,
+            ),
+          ),
+
+          Text(
+            'Hello there and welcome to our app!',
+            style:  TextStyle(
+              color: Colors.black,
+              letterSpacing: 2,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
       ),
     );
   }

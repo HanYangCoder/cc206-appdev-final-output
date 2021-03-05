@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
 
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    String gifLocation = 'assets/sample.gif';
+    String gifLocation = 'assets/SkippyPeppa_3.gif';
     String attemptUsername;
     String attemptPassword;
 
@@ -50,8 +50,8 @@ class _LoginState extends State<Login> {
                   padding: const EdgeInsets.only(top: 30),
                   child: Image(
                     image: AssetImage(gifLocation),
-                    height: 200.0,
-                    width: 200.0,
+                    height: 250.0,
+                    width: 250.0,
                   ),
                 ),
                 
@@ -79,6 +79,7 @@ class _LoginState extends State<Login> {
                           TextFormField(
 
                             decoration: const InputDecoration(hintText: 'Username'),
+                            
                             validator: (value) {
                               if (value.isEmpty){
                                 return 'Please enter a valid username';
@@ -120,21 +121,12 @@ class _LoginState extends State<Login> {
                               ),
                               onPressed: (){
                                 
-                                // TODO: onPressed still not working, please fix later
                                 attemptUsername = usernameController.text;
                                 attemptPassword = passwordController.text;
 
-                                // setState() will refresh the page and set a new state
-                                // depending on what you defined
-                                setState(() {
-                                  if(attemptUsername == 'cict' && attemptPassword == 'wvsu'){
-                                    gifLocation = 'assets/happy.gif';
-                                  }
-
-                                  else{
-                                    gifLocation = 'assets/angry.gif';
-                                  }
-                                });
+                                if(attemptUsername == 'cict' && attemptPassword == 'wvsu'){
+                                  Navigator.pushNamed(context, '/home');
+                                }
                               },
                             ),
                           ),

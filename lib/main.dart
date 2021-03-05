@@ -1,3 +1,4 @@
+import 'package:cc206AppdevFinalOutput/screens/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:cc206AppdevFinalOutput/screens/Login.dart';
 
@@ -17,6 +18,10 @@ class MyApp extends StatelessWidget {
       ),
 
       home: new Login(),
+
+      routes: <String, WidgetBuilder>{
+        '/home' : (BuildContext context) => Home(),
+      },
     );
   }
 }

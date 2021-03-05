@@ -49,6 +49,8 @@ flutter:
    - assets/sample.gif
    - assets/angry.gif
    - assets/happy.gif
+   - assets/SkippyPeppa_3.gif
+   - assets/PeppaPig_Practice2.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
