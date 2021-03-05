@@ -76,6 +76,7 @@ class _LoginState extends State<Login> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
 
+                          //  Username Text Field
                           TextFormField(
 
                             decoration: const InputDecoration(hintText: 'Username'),
@@ -90,6 +91,7 @@ class _LoginState extends State<Login> {
                             controller: usernameController,
                           ),
 
+                          //  Password Text Field
                           TextFormField(
 
                             obscureText: true,
@@ -106,11 +108,13 @@ class _LoginState extends State<Login> {
                             controller: passwordController,
                           ),
 
+                          //  Log-in button w/ padding
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 30.0),
                             child: MaterialButton(
                               minWidth: screenWidth,
                               color: Colors.blue,
+
                               child: Text(
                                 'Login',
                                 style: TextStyle(
@@ -119,6 +123,7 @@ class _LoginState extends State<Login> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
+
                               onPressed: (){
                                 
                                 attemptUsername = usernameController.text;
@@ -135,6 +140,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
+
               ],
             ),
           ]

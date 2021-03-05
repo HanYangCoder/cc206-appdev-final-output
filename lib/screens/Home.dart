@@ -27,7 +27,8 @@ class Home extends StatelessWidget {
           ),
 
           Text(
-            'Hello there and welcome to our app!',
+            'Hello there and welcome to our app!\nAnd I am Peppa Pig',
+            textAlign: TextAlign.center,
             style:  TextStyle(
               color: Colors.black,
               letterSpacing: 2,
